@@ -1,37 +1,412 @@
-header {
+@font-face {
+  font-family: "Roboto";
+  src: url(Font/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Shrikhand";
+  src: url(Font/Shrikhand-Regular.ttf);
+}
+
+.loading {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  -webkit-animation: loading 0.01s;
+          animation: loading 0.01s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+  z-index: 10000;
+}
+
+.loading--spincontainer {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  top: 50vh;
+  left: 50vw;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-img {
-  width: 50%;
+.loading--spin {
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 2s linear 2s;
+          animation: spin 2s linear 2s;
+  -webkit-transition: visibility 3s, opacity 5s linear;
+  transition: visibility 3s, opacity 5s linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
-#logo {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.loading--spin--1 {
+  background-color: #9356dc;
+  margin-right: 20px;
+}
+
+.loading--spin--2 {
+  background-color: #ff79da;
+  margin-right: 20px;
+}
+
+.loading--spin--3 {
+  background-color: #99e2d0;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  padding: 15px;
+  -webkit-box-shadow: 0px 0px 10px #b4b0b0;
+          box-shadow: 0px 0px 10px #b4b0b0;
+  position: relative;
+}
+
+.header_logo {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  margin: 0;
 }
 
 .location {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #e6e1e1;
+  background-color: #ebe5e5;
+  padding: 0px 5px;
+}
+
+.location__icon {
+  margin-right: 0.7em;
+  font-weight: 900;
 }
 
 .location i {
-  font-size: 150%;
+  font-size: 125%;
+  color: black;
+}
+
+.text {
+  padding: 40px 10px 60px 10px;
+  text-align: center;
+  background-color: #f8efef;
+}
+
+.text--title {
+  margin: 0;
+}
+
+.text--extra {
+  margin-bottom: 30px;
+}
+
+.text--btn {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 121, 218, 0.801)), to(rgba(147, 86, 220, 0.863)));
+  background-image: linear-gradient(rgba(255, 121, 218, 0.801), rgba(147, 86, 220, 0.863));
+  background-color: grey;
+  border: 0;
+  border-radius: 100px;
+  color: white;
+  font-weight: 500;
+  padding: 13px 26px;
+  cursor: pointer;
+}
+
+.ope {
+  padding: 25px 15px;
+}
+
+.ope--title {
+  margin-top: 0;
+}
+
+.ope--list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ope--liste {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px 0px 20px 15px;
+  padding: 20px 20px 15px 0;
+  -webkit-box-shadow: 5px 5px 10px #dbd6d6;
+          box-shadow: 5px 5px 10px #dbd6d6;
+  border-radius: 20px;
+  background-color: #e7e7e7;
+}
+
+.ope--icon {
+  margin-right: 20px;
+  margin-left: 10px;
+  margin-top: 2px;
   color: grey;
+  font-size: 20px;
+}
+
+.ope--number {
+  margin: 0;
+  position: relative;
+  left: -10px;
+  border-radius: 50%;
+  background-color: #9356dc;
+  color: white;
+  width: 25px;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.desc {
+  margin-top: 3px;
+}
+
+.rest {
+  padding: 25px 15px;
+  background-color: #f1ecec;
+}
+
+.container {
+  padding: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card {
+  border-radius: 20px;
+  background-color: white;
+  text-decoration: none;
+  position: relative;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.card--img {
+  width: 100%;
+  height: 200px;
+  border: 0;
+  border-radius: 20px 20px 0px 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card--pins {
+  border: 0.5px, transparent;
+  background-color: #99e2d0;
+  color: #19886c;
+  font-weight: 550;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  padding: 2%;
+  border-radius: 7%;
+}
+
+.card--footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding: 15px 12px;
+}
+
+.card--inside {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.card--name {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.card--btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  right: 5px;
+  cursor: pointer;
+  border: 0 solid transparent;
+  visibility: none;
+}
+
+.card--btn:hover {
+  opacity: 10;
+  color: #ff79da;
+}
+
+.card--btn i {
+  font-size: 30px;
+}
+
+.card--btn .empty {
+  position: relative;
+  top: 10px;
+  opacity: 1;
+}
+
+.card--btn .empty:hover {
+  opacity: 10;
+  color: #ff79da;
+}
+
+.card--btn .full {
+  position: relative;
+  top: 10px;
+  right: 30px;
+  opacity: 0;
+}
+
+.card--btn .full:hover {
+  opacity: 10;
+  color: #ff79da;
+}
+
+.card--btn:hover {
+  opacity: 10;
+  color: #ff79da;
+}
+
+.footer {
+  background-color: #424141;
+  color: white;
+  text-decoration: none;
+  list-style: none;
+}
+
+.footer .container {
+  padding: 20px;
+}
+
+.footer i {
+  margin-right: 10px;
+  width: 15px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer--logo {
+  font-size: 600;
+  margin-bottom: 20px;
+  color: white;
+  font-family: "Shrikhand", cursive;
+}
+
+.footer--list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.footer--remand {
+  text-decoration: none;
+  list-style: none;
+}
+
+.footer--remands {
+  font-size: 18px;
+}
+
+.footer--list4 {
+  margin-bottom: 7px;
 }
 /*# sourceMappingURL=main.css.map */
