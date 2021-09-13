@@ -188,7 +188,6 @@ body {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 121, 218, 0.801)), to(rgba(146, 86, 220, 0.705)));
   background-image: linear-gradient(rgba(255, 121, 218, 0.801), rgba(146, 86, 220, 0.705));
   background-color: grey;
-  border: 0;
   border-radius: 100px;
   color: white;
   font-weight: 550;
@@ -306,14 +305,13 @@ body {
 .card--img {
   width: 100%;
   height: 200px;
-  border: 0;
   border-radius: 20px 20px 0px 0px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .card--pins {
-  border: 0.5px, transparent;
+  border: 0.5px transparent;
   background-color: #99e2d0;
   color: #19886c;
   font-weight: 550;
@@ -359,12 +357,12 @@ body {
   position: relative;
   right: 5px;
   cursor: pointer;
-  border: 0 solid transparent;
-  visibility: none;
+  border: solid transparent;
+  visibility: hidden;
 }
 
 .card--btn:hover {
-  opacity: 10;
+  opacity: 2;
   color: #ff79da;
 }
 
@@ -379,7 +377,7 @@ body {
 }
 
 .card--btn .empty:hover {
-  opacity: 10;
+  opacity: 2;
   color: #ff79da;
 }
 
@@ -391,12 +389,12 @@ body {
 }
 
 .card--btn .full:hover {
-  opacity: 10;
+  opacity: 2;
   color: #ff79da;
 }
 
 .card--btn:hover {
-  opacity: 10;
+  opacity: 2;
   color: #ff79da;
 }
 
@@ -422,7 +420,7 @@ body {
 }
 
 .footer--logo {
-  font-size: 600;
+  font-size: 22px;
   margin-bottom: 20px;
   color: white;
   font-family: "Shrikhand", cursive;
