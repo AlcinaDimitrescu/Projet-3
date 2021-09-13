@@ -185,15 +185,24 @@ body {
 }
 
 .text--btn {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 121, 218, 0.801)), to(rgba(147, 86, 220, 0.863)));
-  background-image: linear-gradient(rgba(255, 121, 218, 0.801), rgba(147, 86, 220, 0.863));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 121, 218, 0.801)), to(rgba(146, 86, 220, 0.705)));
+  background-image: linear-gradient(rgba(255, 121, 218, 0.801), rgba(146, 86, 220, 0.705));
   background-color: grey;
   border: 0;
   border-radius: 100px;
   color: white;
-  font-weight: 500;
+  font-weight: 550;
   padding: 13px 26px;
   cursor: pointer;
+  -webkit-box-shadow: 3px 2.5px 1.5px #acaaaa;
+          box-shadow: 3px 2.5px 1.5px #acaaaa;
+}
+
+.text--btn:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79d9), to(#9256dc));
+  background-image: linear-gradient(#ff79d9, #9256dc);
+  -webkit-box-shadow: 7px 5px 3px #acaaaa;
+          box-shadow: 7px 5px 3px #acaaaa;
 }
 
 .ope {
